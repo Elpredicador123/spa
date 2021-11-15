@@ -1,0 +1,41 @@
+<div class="row ">
+    <div class="col-12 py-3 bg-dark text-light text-center mb-5">
+        <h1>Solicitar Prestamo</h1>
+    </div>
+    <div class="col-md-10 mx-auto card p-5 shadow-lg">
+        <form class="row">
+            <div class="col-md-12 mb-3">
+                <a class="btn btn-secondary mb-5 text-light"(click)="logout()">  Cerrar Sesion</a>
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="h5 text-primary">Cliente: </div>
+                        <h3>{{cliente.nombreCliente}} </h3>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="h5 text-primary">DNI: </div>
+                        <h3>{{cliente.dniCliente}} </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mb-3 d-none">
+                <label for="Cliente" class="form-label">Cliente</label>
+                <input [(ngModel)] ="prestamo.idCliente" value="{{prestamo.idCliente}}"  type="text" name="idCliente" class="form-control" id="Cliente">
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="Monto" class="form-label">Monto del Prestamo</label>
+                <input [(ngModel)] ="prestamo.montoPrestamo" type="number" name="montoPrestamo" class="form-control" id="Monto" min="1" required>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="Cuotas" class="form-label">Numero de Cuotas</label>
+                <input [(ngModel)] ="prestamo.cuotasPrestamo" type="number" name="cuotasPrestamo" class="form-control" id="Cuotas" min="1" required>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="Fecha" class="form-label">Fecha Actual</label>
+                <input [(ngModel)] ="prestamo.fechaPrestamo"  type="date" readonly name="fechaPrestamo" class="form-control" id="Fecha" required>
+            </div>
+            <button type="submit" (click)="registrarSolicitud()" class="btn btn-primary col-md-12 mx-auto my-3">Enviar Solicitud</button>
+        </form>
+    </div>
+</div>
+
+

@@ -1,0 +1,8 @@
+.fondo_login{
+    background:rgb(188, 221, 229);
+}
+.imagen_login{
+    background-image: url("https://static.vecteezy.com/system/resources/previews/002/495/316/non_2x/landscape-of-mountains-and-pine-trees-on-blue-background-design-vector.jpg");
+    background-size: cover;
+    height: 118.5vh;
+}

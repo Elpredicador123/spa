@@ -1,0 +1,115 @@
+<div
+  class="
+    min-vh-100
+    d-flex
+    justify-content-center
+    align-items-center
+    row
+    fondo_login
+  "
+>
+  <div
+    class="card col-md-4 shadow-lg px-5 d-none d-md-flex justify-content-center align-items-center border-0 imagen_login text-light"
+  >
+    <p class="h1 border-bottom border-2 pb-2">
+        Registrate
+    </p>
+    <br />
+    <p class="h5">
+        A nuestra aplicacion de Prestamos Financiera Perú.
+    </p>
+  </div>
+  <div class="card col-md-4 my-5 col-11 py-4 shadow-lg">
+    <div class="card-body text-center text-primary border-bottom border-primary border-2 pb-4 mb-4">
+      <h4 class="card-title">Registro</h4>
+      <p class="card-text">Ingresar datos</p>
+    </div>
+    <div class="card-header border-0">
+      <form>
+        <div class="mb-0">
+          <label for="nombre" class="form-label text-secondary">Nombre de usuario</label>
+          <input
+            type="text"
+            [(ngModel)]="cliente.nombreCliente"
+            name="nombreCliente"
+            class="form-control"
+            id="nombre"
+          />
+        </div>
+        <div class="mb-0">
+          <label for="dni" class="form-label text-secondary">Dni de usuario</label>
+          <input
+            type="text"
+            [(ngModel)]="cliente.dniCliente"
+            name="dniCliente"
+            class="form-control"
+            id="dni"
+            maxlength="8"
+          />
+        </div>
+        <div class="mb-0">
+          <label for="email" class="form-label text-secondary">Email de usuario</label>
+          <input
+            type="email"
+            [(ngModel)]="cliente.emailCliente"
+            name="emailCliente"
+            class="form-control"
+            id="email"
+          />
+        </div>
+        <div class="mb-0">
+          <label for="celular" class="form-label text-secondary">Celular de usuario</label>
+          <input
+            type="text"
+            [(ngModel)]="cliente.celularCliente"
+            name="celularCliente"
+            class="form-control"
+            id="celular"
+            maxlength="9"
+          />
+        </div>
+        <div class="mb-0">
+          <label for="direccion" class="form-label text-secondary">Direccion de usuario</label>
+          <input
+            type="text"
+            [(ngModel)]="cliente.direccionCasaCliente"
+            name="direccionCasaCliente"
+            class="form-control"
+            id="direccion"
+          />
+        </div>
+        <div class="mb-0">
+          <label for="contraseña" class="form-label text-secondary">Contraseña</label>
+          <input
+            type="password"
+            [(ngModel)]="cliente.contraCliente"
+            name="contraseñaCliente"
+            class="form-control"
+            id="contraseña"
+          />
+        </div>
+        <div class="mb-0">
+          <label for="confirmar_contraseña" class="form-label text-secondary">Confirmar Contraseña</label>
+          <input
+            type="password"
+            [(ngModel)]="verificarcontraCliente"
+            name="verificarcontraCliente"
+            class="form-control"
+            id="confirmar_contraseña"
+          />
+        </div>
+        <div class="my-3">
+          Si tienes cuenta <a name="" id="" class="btn-link" routerLink="/login" role="button"> Inicia Sesion</a>
+        </div>
+        <button
+          type="submit"
+          (click)="register()"
+          class="btn btn-primary text-light col-12"
+        >
+          Registrarse
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
